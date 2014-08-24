@@ -18,8 +18,9 @@ UCI HAR Dataset/features.txt
 The tidy dataset combines the training/test data for X (feature data), y (activity labels), and subject (subject ID number).  The data frame only includes the feature variables containing mean and standard deviation measurements (i.e. containing mean() and std() in the feature name), as described in the dataset documentation. Activity labels are changed to 
 the descriptive activity names (e.g. the label "1" becomes "WALKING") contained in "activity.txt".  Column names are changed to the appropriate descriptive feature name (e.g. V1 -> tBodyAcc.mean()-X) that are contained in "features.txt". The tidy dataset gives the average of each variable for each subject and each activity. For example the row
 
-subject_ID   activity  tBodyAcc.mean()-X
-    1        WALKING    -0.345678
+    subject_ID   activity  tBodyAcc.mean()-X  
+
+    1        WALKING    -0.345678  
     
 signifies that the mean of the tBodyAcc.mean()-X measurements is -0.345678 for subject 1 for the activity of walking.  The tidy dataset is output to a file named "Tidy_Data.txt" in the working directory.
 

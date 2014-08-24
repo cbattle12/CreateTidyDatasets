@@ -63,15 +63,15 @@ for(i in num){
 names(dataMStd) <- as.character(features[idx,2])
 names(yDesc) = "activity"
 names(subMerge) = "subject_ID"
-tidyData1 <- cbind(subMerge,yDesc,dataMStd)
+combineData <- cbind(subMerge,yDesc,dataMStd)
 
 
 ## 5) Create another dataset with each subject and the average of their activity variables
 library(reshape2)
-dataMelt <- melt(tidyData1, id = c("activity","subject_ID"), measure.vars = names(dataMStd))
-tidyData2 <- dcast(dataMelt,activity + subject_ID ~ variable, mean)
+dataMelt <- melt(combineData, id = c("activity","subject_ID"), measure.vars = names(dataMStd))
+tidyData <- dcast(dataMelt,activity + subject_ID ~ variable, mean)
 print("Writing tidy data set...")
-write.table(tidyData2, file = "Tidy_Data.txt", row.names = F)
+write.table(tidyData, file = "Tidy_Data.txt", row.names = F)
 print("Done!")
 
 ##-----------------------------------------------------------------------------------------///
