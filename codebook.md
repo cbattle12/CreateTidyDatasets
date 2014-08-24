@@ -9,8 +9,10 @@ subject_ID   activity  tBodyAcc.mean()-X
 indicates that the mean of the tBodyAcc.mean()-X measurements is -0.345678 for subject 1 for the activity of walking. The following list details what each column represents.
 
 "subject_ID" = Subject ID number, from 1-30
+
 "activity" = Type of activity (WALKING,WALKING_UPSTAIRS, WALKING _DOWNSTAIRS, SITTING,
              STANDING, LAYING)
+             
 "tBodyAcc-mean()-X" = mean body acceleration X axial direction, time domain
 "tBodyAcc-mean()-Y" = mean body acceleration Y axial direction, time domain
 "tBodyAcc-mean()-Z" = mean body acceleration Z axial direction, time domain
