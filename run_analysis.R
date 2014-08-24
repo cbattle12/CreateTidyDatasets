@@ -71,7 +71,7 @@ library(reshape2)
 dataMelt <- melt(combineData, id = c("activity","subject_ID"), measure.vars = names(dataMStd))
 tidyData <- dcast(dataMelt,activity + subject_ID ~ variable, mean)
 print("Writing tidy data set...")
-write.table(tidyData, file = "Tidy_Data.txt", row.names = F)
+write.table(tidyData, file = "Tidy_Data.txt", eol = "\r\n", row.names = F)
 print("Done!")
 
 ##-----------------------------------------------------------------------------------------///
